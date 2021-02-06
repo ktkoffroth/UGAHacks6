@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+// ReSharper disable All
 
 public class Locomotion : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Locomotion : MonoBehaviour
     public SteamVR_Action_Vector2 movement;
     public GameObject cameraGameObject;
     public float speedMod;
+    public float gravity;
     private CharacterController characterController;
 
     public bool getSnapLeftDown()
@@ -58,7 +60,10 @@ public class Locomotion : MonoBehaviour
     void FixedUpdate()
     {
         // gameObject.transform.position += getMovement();
-        characterController.Move(getMovement());
+        {
+            
+        }
+        characterController.Move(getMovement()+Vector3.down * gravity * Time.deltaTime);
         if (getSnapLeftDown())
         {
             transform.RotateAround(transform.position, Vector3.up, -30);
