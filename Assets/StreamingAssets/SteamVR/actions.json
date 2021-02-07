@@ -1,47 +1,58 @@
 {
   "actions": [
     {
-      "name": "/actions/game/in/InteractUI",
+      "name": "/actions/default/in/InteractUI",
       "type": "boolean"
     },
     {
-      "name": "/actions/game/in/SkeletonLeftHand",
+      "name": "/actions/default/in/SkeletonLeftHand",
       "type": "skeleton",
       "skeleton": "/skeleton/hand/left"
     },
     {
-      "name": "/actions/game/in/SkeletonRightHand",
+      "name": "/actions/default/in/SkeletonRightHand",
       "type": "skeleton",
       "skeleton": "/skeleton/hand/right"
     },
     {
-      "name": "/actions/game/in/HeadsetOnHead",
+      "name": "/actions/default/in/HeadsetOnHead",
       "type": "boolean",
       "requirement": "optional"
     },
     {
-      "name": "/actions/game/in/SnapTurnLeft",
+      "name": "/actions/default/in/SnapTurnLeft",
       "type": "boolean",
       "requirement": "suggested"
     },
     {
-      "name": "/actions/game/in/SnapTurnRight",
+      "name": "/actions/default/in/SnapTurnRight",
       "type": "boolean"
     },
     {
-      "name": "/actions/game/in/Movement",
+      "name": "/actions/default/in/Movement",
       "type": "vector2"
     },
     {
-      "name": "/actions/game/in/Pose",
+      "name": "/actions/default/in/Pose",
+      "type": "pose",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/default/in/Move",
       "type": "boolean"
     },
     {
-      "name": "/actions/game/in/Move",
-      "type": "boolean"
+      "name": "/actions/default/in/Trigger",
+      "type": "vector1",
+      "requirement": "mandatory"
     },
     {
-      "name": "/actions/game/out/Haptic",
+      "name": "/actions/default/in/GrabGrip",
+      "type": "boolean",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
     {
@@ -76,7 +87,7 @@
   ],
   "action_sets": [
     {
-      "name": "/actions/game",
+      "name": "/actions/default",
       "usage": "leftright"
     },
     {
@@ -89,6 +100,10 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/NewSet",
       "usage": "single"
     }
   ],
