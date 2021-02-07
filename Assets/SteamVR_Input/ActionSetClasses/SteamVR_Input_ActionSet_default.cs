@@ -25,6 +25,38 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean Teleport
+        {
+            get
+            {
+                return SteamVR_Actions.default_Teleport;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean GrabPinch
+        {
+            get
+            {
+                return SteamVR_Actions.default_GrabPinch;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean GrabGrip
+        {
+            get
+            {
+                return SteamVR_Actions.default_GrabGrip;
+            }
+        }
+        
+        public virtual SteamVR_Action_Pose Pose
+        {
+            get
+            {
+                return SteamVR_Actions.default_Pose;
+            }
+        }
+        
         public virtual SteamVR_Action_Skeleton SkeletonLeftHand
         {
             get
@@ -38,6 +70,14 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_SkeletonRightHand;
+            }
+        }
+        
+        public virtual SteamVR_Action_Single Squeeze
+        {
+            get
+            {
+                return SteamVR_Actions.default_Squeeze;
             }
         }
         
@@ -65,22 +105,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Vector2 Movement
-        {
-            get
-            {
-                return SteamVR_Actions.default_Movement;
-            }
-        }
-        
-        public virtual SteamVR_Action_Pose Pose
-        {
-            get
-            {
-                return SteamVR_Actions.default_Pose;
-            }
-        }
-        
         public virtual SteamVR_Action_Boolean Move
         {
             get
@@ -89,19 +113,19 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Vector2 Movement
+        {
+            get
+            {
+                return SteamVR_Actions.default_Movement;
+            }
+        }
+        
         public virtual SteamVR_Action_Single Trigger
         {
             get
             {
                 return SteamVR_Actions.default_Trigger;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean GrabGrip
-        {
-            get
-            {
-                return SteamVR_Actions.default_GrabGrip;
             }
         }
         

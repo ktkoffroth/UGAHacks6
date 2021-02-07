@@ -7,7 +7,7 @@ public class DoorClose : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        //load next room
+        
     }
 
     // Update is called once per frame
@@ -17,7 +17,9 @@ public class DoorClose : MonoBehaviour
         if (other.GetType() == typeof(CharacterController))
         {
             transform.parent.GetComponent<HingeJoint>().useMotor = false;
-            //unload room
+            
+            
+            other.gameObject.GetComponent<Map>().RemoveRoom();
         }
     }
 }
